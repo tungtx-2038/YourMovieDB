@@ -63,47 +63,4 @@ struct APIService {
             return Disposables.create()
         }
     }
-
-    func upload(input: BaseUploadRequest) -> Observable<Void> {
-
-        print("\n------------ UPLOAD INPUT")
-        print("link: %@", input.url)
-        print("body: %@", input.parameters ?? "No Body")
-        print("------------ END UPLOAD INPUT\n")
-
-        return Observable.create { observer in
-            self.alamofireManager.upload(multipartFormData: { multipartFormData in
-                if let parameters = input.parameters {
-                    for (key, value) in parameters {
-                        guard let data = "\(value)".data(using: String.Encoding.utf8) else {
-                            return
-                        }
-                        multipartFormData.append(data, withName: key)
-                    }
-                }
-                if let files = input.files {
-                    files.forEach { file in
-                        if let url = URL(string: file.path) {
-                            multipartFormData.append(url, withName: file.key)
-                        }
-                    }
-                }
-            }, usingThreshold: UInt64.init(), to: input.url) { result in
-                switch result {
-                case .success(let upload, _, _):
-                    upload.responseJSON { response in
-                        if let error = response.error {
-                            observer.onError(error)
-                            return
-                        }
-                        observer.onNext()
-                        observer.onCompleted()
-                    }
-                case .failure(let error):
-                    observer.onError(error)
-                }
-            }
-            return Disposables.create()
-        }
-    }
 }

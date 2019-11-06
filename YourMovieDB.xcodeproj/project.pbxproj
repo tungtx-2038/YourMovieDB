@@ -18,7 +18,6 @@
 		DB9FF6AE2371350500BF277C /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FF6AD2371350500BF277C /* ErrorResponse.swift */; };
 		DB9FF6B023714C3F00BF277C /* CustomRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FF6AF23714C3F00BF277C /* CustomRequestAdapter.swift */; };
 		DB9FF6B223714F7C00BF277C /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FF6B123714F7C00BF277C /* BaseRequest.swift */; };
-		DB9FF6B423714F8E00BF277C /* BaseUploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FF6B323714F8E00BF277C /* BaseUploadRequest.swift */; };
 		DB9FF6B62371504A00BF277C /* ObservableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FF6B52371504A00BF277C /* ObservableExtension.swift */; };
 		DB9FF6B8237150EE00BF277C /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FF6B7237150EE00BF277C /* UIViewControllerExtension.swift */; };
 		DB9FF6BA2371515500BF277C /* AlertViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FF6B92371515500BF277C /* AlertViewControllerExtension.swift */; };
@@ -26,6 +25,7 @@
 		DB9FF6C02371522300BF277C /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FF6BF2371522300BF277C /* URLs.swift */; };
 		DB9FF6C32371525C00BF277C /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FF6C22371525C00BF277C /* ErrorTracker.swift */; };
 		DB9FF6C52371528E00BF277C /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9FF6C42371528E00BF277C /* ActivityIndicator.swift */; };
+		DBF78AB823728E6200BCC49D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF78AB723728E6200BCC49D /* Keys.swift */; };
 		FAFD895D54352F7135E1D0A8 /* Pods_YourMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926B73F289D03F0495D4BBB6 /* Pods_YourMovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,6 @@
 		DB9FF6AD2371350500BF277C /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		DB9FF6AF23714C3F00BF277C /* CustomRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRequestAdapter.swift; sourceTree = "<group>"; };
 		DB9FF6B123714F7C00BF277C /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
-		DB9FF6B323714F8E00BF277C /* BaseUploadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUploadRequest.swift; sourceTree = "<group>"; };
 		DB9FF6B52371504A00BF277C /* ObservableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableExtension.swift; sourceTree = "<group>"; };
 		DB9FF6B7237150EE00BF277C /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		DB9FF6B92371515500BF277C /* AlertViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		DB9FF6BF2371522300BF277C /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		DB9FF6C22371525C00BF277C /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		DB9FF6C42371528E00BF277C /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		DBF78AB723728E6200BCC49D /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		E04FBBADB599F3C0353B67E9 /* Pods-YourMovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourMovieDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YourMovieDB/Pods-YourMovieDB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +101,7 @@
 				DB9FF699237131B900BF277C /* Common */,
 				DB9FF698237131B700BF277C /* Data */,
 				DB9FF697237131A600BF277C /* Extensions */,
-				DB9FF696237131A300BF277C /* Repositories */,
+				DBF78AB423728D7800BCC49D /* Repositories */,
 				DB9FF695237131A100BF277C /* Resources */,
 				DB9FF6942371319E00BF277C /* Scenes */,
 				DB9FF6932371319C00BF277C /* Utils */,
@@ -123,6 +123,7 @@
 				DB9FF6C12371524A00BF277C /* Reactive */,
 				DB9FF6BD237151F400BF277C /* Constants.swift */,
 				DB9FF6BF2371522300BF277C /* URLs.swift */,
+				DBF78AB723728E6200BCC49D /* Keys.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -140,13 +141,6 @@
 				DB9FF68723712E3F00BF277C /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		DB9FF696237131A300BF277C /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repositories;
 			sourceTree = "<group>";
 		};
 		DB9FF697237131A600BF277C /* Extensions */ = {
@@ -250,7 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				DB9FF6B123714F7C00BF277C /* BaseRequest.swift */,
-				DB9FF6B323714F8E00BF277C /* BaseUploadRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -279,6 +272,13 @@
 				DB9FF6C42371528E00BF277C /* ActivityIndicator.swift */,
 			);
 			path = Reactive;
+			sourceTree = "<group>";
+		};
+		DBF78AB423728D7800BCC49D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		E670C95AA7B9F1D038057CD1 /* Pods */ = {
@@ -427,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9FF6B62371504A00BF277C /* ObservableExtension.swift in Sources */,
+				DBF78AB823728E6200BCC49D /* Keys.swift in Sources */,
 				DB9FF6AC237134D300BF277C /* BaseError.swift in Sources */,
 				DB9FF6C32371525C00BF277C /* ErrorTracker.swift in Sources */,
 				DB9FF6BA2371515500BF277C /* AlertViewControllerExtension.swift in Sources */,
@@ -440,7 +441,6 @@
 				DB9FF6AE2371350500BF277C /* ErrorResponse.swift in Sources */,
 				DB9FF6BE237151F400BF277C /* Constants.swift in Sources */,
 				DB9FF6B223714F7C00BF277C /* BaseRequest.swift in Sources */,
-				DB9FF6B423714F8E00BF277C /* BaseUploadRequest.swift in Sources */,
 				DB9FF6C52371528E00BF277C /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

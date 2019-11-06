@@ -9,6 +9,5 @@
 import Foundation
 
 struct Constants {
-    static let keyMovie = ""
     static let appName = "Your Movie Db"
 }
