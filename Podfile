@@ -15,4 +15,5 @@ target 'YourMovieDB' do
   pod 'RxCocoa'
   pod 'SVProgressHUD'
   pod 'SwiftLint'
+  pod 'AlamofireObjectMapper', '~> 5.2'
 end
