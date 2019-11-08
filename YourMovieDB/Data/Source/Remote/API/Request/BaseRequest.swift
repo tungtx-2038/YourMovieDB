@@ -9,8 +9,7 @@
 import Foundation
 import Alamofire
 
-class BaseRequest: NSObject {
-
+class BaseRequest {
     var url = ""
     var requestType = Alamofire.HTTPMethod.get
     var body: [String: Any]?
@@ -24,18 +23,17 @@ class BaseRequest: NSObject {
     }
 
     init(url: String) {
-        super.init()
         self.url = url
+        self.body?["api_key"] = Keys.keyMovie
     }
 
     init(url: String, requestType: Alamofire.HTTPMethod) {
-        super.init()
         self.url = url
         self.requestType = requestType
+        self.body?["api_key"] = Keys.keyMovie
     }
 
     init(url: String, requestType: Alamofire.HTTPMethod, body: [String: Any]?) {
-        super.init()
         self.url = url
         self.requestType = requestType
         self.body = body

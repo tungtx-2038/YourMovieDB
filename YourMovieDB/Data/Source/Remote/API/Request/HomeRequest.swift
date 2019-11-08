@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+final class HomeRequest: BaseRequest {
+    required init(_ urlPath: String) {
+        super.init(url: urlPath, requestType: .get)
+    }
+}
