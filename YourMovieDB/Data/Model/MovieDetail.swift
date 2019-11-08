@@ -31,6 +31,9 @@ struct MovieDetail: BaseModel {
     var video = false
     var voteAverage = 0.0
     var voteCount = 0
+    
+    init() {
+    }
 
     init?(map: Map) {
         mapping(map: map)

@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import ObjectMapper
 import RxSwift
+import netfox
 
 struct APIService {
 
@@ -21,8 +22,9 @@ struct APIService {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 30
         configuration.timeoutIntervalForResource = 30
+        configuration.protocolClasses?.insert(NFXProtocol.self, at: 0)
+        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
         alamofireManager = Alamofire.SessionManager(configuration: configuration)
-        alamofireManager.adapter = CustomRequestAdapter()
     }
 
     func request<T: Mappable>(input: BaseRequest) -> Observable<T> {

@@ -10,13 +10,13 @@ import Foundation
 import ObjectMapper
 
 final class HomeResponse: Mappable {
-    var movieList = [Movie]()
+    var movies = [Movie]()
     
     init?(map: Map) {
         mapping(map: map)
     }
     
     func mapping(map: Map) {
-        movieList <- map["results"]
+        movies <- map["results"]
     }
 }
