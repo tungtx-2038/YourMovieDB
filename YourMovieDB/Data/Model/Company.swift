@@ -14,7 +14,7 @@ struct Company: BaseModel {
     var logoPath = ""
     var name = ""
     var originCountry = ""
-
+    
     init?(map: Map) {
         mapping(map: map)
     }
